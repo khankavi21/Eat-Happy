@@ -5,9 +5,19 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+   
+}
+
+.External{
+  font-family: 'Arya', sans-serif;
+  font-size: 50px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#carousel{
+  max-height: 500px;
 }
