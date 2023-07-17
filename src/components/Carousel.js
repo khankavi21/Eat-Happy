@@ -7,19 +7,19 @@ export default function Carousel() {
                 <div className="carousel-inner" id="carousel">
                     <div className='carousel-caption' style={{zIndex:"10"}}>
                         <form className="d-flex" >
-                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                            <input className="form-control me-" type="search" placeholder="Search" aria-label="Search" />
                             <button className="btn btn-outline-success text-white bg-success" type="submit">Search</button>
                         </form>
 
                     </div>
                     <div className="carousel-item active">
-                        <img src="https://source.unsplash.com/random/1700x1700/?Burger" className="d-block w-100" style={{filter:"brightness(45%)"}} alt="Burger" />
+                        <img src="https://source.unsplash.com/random/1600x600/?Burger" className="d-block w-100" style={{filter:"brightness(45%)"}} alt="Burger" />
                     </div>
                     <div className="carousel-item">
-                        <img src="https://source.unsplash.com/random/1700x1700/?Noodles" className="d-block w-100" style={{filter:"brightness(45%)"}} alt="Noodles" />
+                        <img src="https://source.unsplash.com/random/1600x600/?noodle" className="d-block w-100" style={{filter:"brightness(45%)"}} alt="Noodles" />
                     </div>
                     <div className="carousel-item">
-                        <img src="https://source.unsplash.com/random/1700x1700/?cake" className="d-block w-100" style={{filter:"brightness(45%)"}} alt="cake" />
+                        <img src="https://source.unsplash.com/random/1600x600/?cake" className="d-block w-100" style={{filter:"brightness(45%)"}} alt="cake" />
                     </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
