@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link,useNavigate } from 'react-router-dom'
+import Navbar from '../components/Navbar'
 
 
 export default function Login() {
@@ -37,25 +38,28 @@ let navigate = useNavigate()
 
 
   return (
-    <>
+    <div style={{backgroundImage: 'url("https://edge.mwallpapers.com/photos/celebrities/food/food-wallpaper-background-android-iphone-desktop-hd-backgrounds-wallpapers-1080p-4khd-wallpapers-desktop-background-android-iphone-1080p-4k-x2mfz.jpg")', height: '100vh', backgroundSize: 'cover'}}>
+      <div>
+        <Navbar/>
+      </div>
       <div className='container mt-5'>
-        <form onSubmit={handleSubmit}>
+        <form className='w-50 m-auto mt-5 border bg-dark border-success rounded' onSubmit={handleSubmit}>
           
-        <div className="form-group mb-3">
+        <div className="form-group m-3">
             <label htmlFor="exampleInputEmail1">Email address</label>
             <input type="email" className="form-control mt-2" name='email' value={credentials.email} onChange={onChange} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
             <div id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</div>
           </div>
-          <div className="form-group mb-3">
+          <div className="form-group m-3">
             <label htmlFor="exampleInputPassword1">Password</label>
             <input type="password" className="form-control mt-2" name='password' value={credentials.password} onChange={onChange} id="exampleInputPassword1" placeholder="Password" />
           </div>
 
           <button type="submit" className="m-3 btn btn-success">Submit</button>
-          <Link to="/createuser" className='m-3 btn btn-danger'>I'm a New User</Link>
+          <Link to="/createuser" className='m-3 mx-1 btn btn-danger'>I'm a New User</Link>
 
         </form>
       </div>
-    </>
+    </div>
   )
 }

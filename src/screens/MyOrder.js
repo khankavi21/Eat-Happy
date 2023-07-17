@@ -73,10 +73,10 @@ const fetchMyOrder = async () => {
                                         })
 
                                     )
-                                }):<h3>not gound</h3>
+                                }):<h3>You haven't order yet</h3>
                             )
                         }
-                     ):<h3>loude</h3>
+                     ):""
                     
                 }
 

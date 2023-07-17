@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import Navbar from '../components/Navbar';
 
 export default function Signup() {
     
@@ -30,23 +31,26 @@ export default function Signup() {
 
     
     return (
-        <>
+        <div style={{ backgroundImage: 'url("https://wallpapercave.com/wp/wp7029317.jpg")', backgroundSize: 'cover',height: '100vh' }}>
+        <div>
+          <Navbar/>
+        </div>
         <div className='container mt-5'>
-            <form onSubmit={handleSubmit}>
-                <div className="form-group mb-3">
+            <form className='w-50 m-auto mt-5 border bg-dark border-success rounded' onSubmit={handleSubmit}>
+                <div className="form-group m-3">
                     <label htmlFor="name">Name</label>
                     <input type="text" className="form-control mt-2" placeholder="Enter your name" name='name' value={credentials.name} onChange={onChange} />
                 </div>
-                <div className="form-group mb-3">
+                <div className="form-group m-3">
                     <label htmlFor="exampleInputEmail1">Email address</label>
                     <input type="email" className="form-control mt-2" name='email' value={credentials.email} onChange={onChange}  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
                     <div id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</div>
                 </div>
-                <div className="form-group mb-3">
+                <div className="form-group m-3">
                     <label htmlFor="exampleInputPassword1">Password</label>
                     <input type="password" className="form-control mt-2" name='password' value={credentials.password} onChange={onChange} id="exampleInputPassword1" placeholder="Password"/>
                 </div>
-                <div className="form-group mb-3">
+                <div className="form-group m-3">
                     <label htmlFor="exampleInputPassword1">Address</label>
                     <input type="address" className="form-control mt-2" name='geolocation' value={credentials.address} onChange={onChange} placeholder="Address"/>
                 </div>
@@ -56,7 +60,7 @@ export default function Signup() {
                   
             </form>
         </div>
-        </>
+        </div>
     )
 }
 

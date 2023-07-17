@@ -68,10 +68,10 @@ export default function Home() {
                         ? foodCat.map((data) => {
                             return (
                                 <div className='row mb-3'>
-                                    <div key={data._id} className='fs-3 m-3 text-dark'>
+                                    <div key={data._id} className='fs-3 m-3 text-light font-weight-bold'>
                                         {data.CategoryName}
                                     </div>
-                                    <hr className='bg-black' size="5" />
+                                    <hr className='bg-white' size="5" />
                                     {
                                         foodItem !== [] ?
                                             foodItem.filter((item) => (item.CategoryName === data.CategoryName)&&(item.name.toLowerCase().includes(search.toLocaleLowerCase())))

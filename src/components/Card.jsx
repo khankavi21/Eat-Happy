@@ -74,8 +74,8 @@ export default function Card(props) {
               Rs.{finalPrice}/-
             </div>
           </div>
-          <hr />
-          <button className={'btn btn-success justify-center ms-2'} onClick={handleAddToCart}>Add to Cart</button>
+          <hr className='bg-black' size="7"/>
+          <button className={'btn  bg-success justify-center ms-2 '} onClick={handleAddToCart}>Add to Cart</button>
         </div>
 
       </div>
