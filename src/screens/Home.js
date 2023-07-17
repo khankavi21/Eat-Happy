@@ -30,14 +30,14 @@ export default function Home() {
 
 
     return (
-        <div>
+        <div className='colourhuntbody'>
             <div><Navbar /></div>
             <div>
                 <div id="carouselExampleFade" className="carousel slide carousel-fade " data-bs-ride="carousel" style={{ objectFit: "contain" }}>
                     <div className="carousel-inner" id="carousel">
                         <div className='carousel-caption' style={{ zIndex: "10" }}>
                             <div className="d-flex justify-content-center" >
-                                <input className="form-control me-10" type="search" placeholder="Search" aria-label="Search" value={search} onChange={(e)=>{setSearch(e.target.value)}} />
+                                <input className="form-control me-10 bg-white" type="search" placeholder="Search" aria-label="Search" value={search} onChange={(e)=>{setSearch(e.target.value)}} />
                                 
                             </div>
 
@@ -68,10 +68,10 @@ export default function Home() {
                         ? foodCat.map((data) => {
                             return (
                                 <div className='row mb-3'>
-                                    <div key={data._id} className='fs-3 m-3'>
+                                    <div key={data._id} className='fs-3 m-3 text-dark'>
                                         {data.CategoryName}
                                     </div>
-                                    <hr />
+                                    <hr className='bg-black' size="5" />
                                     {
                                         foodItem !== [] ?
                                             foodItem.filter((item) => (item.CategoryName === data.CategoryName)&&(item.name.toLowerCase().includes(search.toLocaleLowerCase())))

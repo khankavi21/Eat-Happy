@@ -3,23 +3,29 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
 export default function MyOrder() {
-   
-    const [orderData,setOrderData] =useState({});
-    const fetchMyOrder =async()=>{
-        console.log(localStorage.getItem('userEmail'))
-        await fetch("http://localhost:5000/api/myorderData",{
-            method:'POST',
-            header:{
-                'Content-Type':'application/json'
-            },
-            body:JSON.stringify({
-                email: localStorage.getItem('userEmail')
-            })
-        }).then(async (res)=>{
-            let response =await res.json()
-            await setOrderData(response)
-        })
-    }
+
+const [orderData, setOrderData] = useState({});
+
+const fetchMyOrder = async () => {
+  console.log(localStorage.getItem('userEmail'));
+  await fetch('http://localhost:5000/api/myorderData', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      email: localStorage.getItem('userEmail'),
+    }),
+  })
+    .then((res) => res.json())
+    .then((response) => {
+      setOrderData(response);
+    })
+    .catch((error) => {
+      console.error('Error fetching order data:', error);
+    });
+};
+
 
     useEffect(()=>{
         fetchMyOrder()
@@ -48,7 +54,6 @@ export default function MyOrder() {
                                                     </div> :
                                                         <div className='col-12 col-md-6 col-lg-3' >
                                                             <div className="card mt-3" style={{ width: "16rem", maxHeight: "360px" }}>
-                                                                <img src={arrayData.img} className="card-img-top" alt="..." style={{ height: "120px", objectFit: "fill" }} />
                                                                 <div className="card-body">
                                                                     <h5 className="card-title">{arrayData.name}</h5>
                                                                     <div className='container w-100 p-0' style={{ height: "38px" }}>
